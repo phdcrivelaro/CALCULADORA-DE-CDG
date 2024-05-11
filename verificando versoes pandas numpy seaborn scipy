@@ -1,0 +1,64 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP6Edsc7QqqZ1aQGmC9rsWL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/phdcrivelaro/CALCULADORA-DE-CDG/blob/main/verificando%20versoes%20pandas%20numpy%20seaborn%20scipy\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rOMDsPmsgitI",
+        "outputId": "2e936624-e405-447a-bab4-710ae05b9bb8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Versão do pandas -> 2.0.3\n",
+            "Versão do numpy -> 1.25.2\n",
+            "Versão do seaborn -> 0.13.1\n",
+            "Versão do scipy -> 1.11.4\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas\n",
+        "import numpy\n",
+        "import seaborn\n",
+        "import scipy\n",
+        "\n",
+        "print('Versão do pandas -> %s' % pandas.__version__)\n",
+        "print('Versão do numpy -> %s' % numpy.__version__)\n",
+        "print('Versão do seaborn -> %s' % seaborn.__version__)\n",
+        "print('Versão do scipy -> %s' % scipy.__version__)\n"
+      ]
+    }
+  ]
+}
