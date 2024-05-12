@@ -1,0 +1,72 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPfUzANu8M5xGc5UhdO/cIF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/phdcrivelaro/CALCULADORA-DE-CDG/blob/main/probabilidade%20numero%20par\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u8prbgq2cBp4",
+        "outputId": "cf7da50a-3df1-4be3-f92f-14f7f0b8c9fb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Probabilidade de obter um número par em um lançamento de dado justo: 0.4942\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Importando a biblioteca random\n",
+        "import random\n",
+        "\n",
+        "# Definindo a função para simular o lançamento de um dado\n",
+        "def lancamento_dado():\n",
+        "    return random.randint(1, 6)  # Retorna um número aleatório entre 1 e 6 (inclusivo)\n",
+        "\n",
+        "# Definindo a função para calcular a probabilidade de obter um número par\n",
+        "def probabilidade_numero_par(num_lancamentos):\n",
+        "    numeros_pares = sum(1 for _ in range(num_lancamentos) if lancamento_dado() % 2 == 0)\n",
+        "    return numeros_pares / num_lancamentos\n",
+        "\n",
+        "# Número de lançamentos\n",
+        "num_lancamentos = 10000\n",
+        "\n",
+        "# Calculando a probabilidade de obter um número par\n",
+        "prob_par = probabilidade_numero_par(num_lancamentos)\n",
+        "\n",
+        "# Exibindo o resultado\n",
+        "print(\"Probabilidade de obter um número par em um lançamento de dado justo:\", prob_par)\n"
+      ]
+    }
+  ]
+}
