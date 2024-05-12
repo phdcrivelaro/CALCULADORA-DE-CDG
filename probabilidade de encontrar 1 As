@@ -1,0 +1,62 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMMQsuikCa28pRoN2XCcDoJ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/phdcrivelaro/CALCULADORA-DE-CDG/blob/main/probabilidade%20de%20encontrar%201%20As\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-Gu6TfnVcmjj",
+        "outputId": "25d3056f-4fa4-43b0-d1a5-70ae837b3bb7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Probabilidade de obter um Ás em uma extração aleatória de um baralho padrão: 0.0737\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "def probabilidade_as(num_amostras):\n",
+        "    baralho = ['Ás', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valete', 'Dama', 'Rei']\n",
+        "    num_as = sum(1 for _ in range(num_amostras) if random.choices(baralho, k=1)[0] == 'Ás')\n",
+        "    return num_as / num_amostras\n",
+        "\n",
+        "num_amostras = 10000\n",
+        "prob_as = probabilidade_as(num_amostras)\n",
+        "print(\"Probabilidade de obter um Ás em uma extração aleatória de um baralho padrão:\", prob_as)\n"
+      ]
+    }
+  ]
+}
